@@ -18,7 +18,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run Bartholomew Invariant Sentinel
-        uses: ivegotahunnitonit/bartholomew@main
+        # Pinned to immutable commit SHA for supply-chain security
+        uses: staccFoxx/bartholomew@bc0bf96f91e75c3012c3980895253471242ddafd
         with:
           audit-path: "."
           fail-on-violation: false
